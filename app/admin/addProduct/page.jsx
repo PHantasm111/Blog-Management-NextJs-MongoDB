@@ -1,6 +1,7 @@
 'use client'
 
 import { assets } from '@/Assets/assets'
+import axios from 'axios'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import { toast } from 'react-toastify'
@@ -56,7 +57,7 @@ const page = () => {
 
     return (
         <>
-            <form className='pt-5 px-5 sm:pt-12 sm:pl-16'>
+            <form onSubmit={onSubmitHandler} className='pt-5 px-5 sm:pt-12 sm:pl-16'>
                 <p className='text-xl'>Upload thumbnail</p>
                 <div className='w-[140px]'>
                     <label htmlFor='image'>
